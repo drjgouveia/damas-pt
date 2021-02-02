@@ -1,37 +1,16 @@
 var quest = new Array();
-quest[0] = new Array("Em que ano o Alexandre O'Neill nasceu?", "1918", "1924", "459", "1924");
-quest[1] = new Array("Qual foi nome do primeiro livro publicado por Alexandre O'Neill?", "No Reino da Dinamarca", "Tempo de Fantasmas", "Feira Cabisbaixa", "No Reino da Dinamarca");
-quest[2] = new Array("Qual era o movimento literário de Alexandre O'Neill?", "Surrealismo", "Romantismo", "Realismo", "Surrealismo");
-quest[3] = new Array("Quem era o pai de Alexandre O'Neill?", "Marcelo Rebelo de Sousa", "Pedro Moura Coutinho O'Neill", "José António Pereira de Eça O'Neill", "Francisco Costa", "José António Pereira de Eça O'Neill");
-quest[4] = new Array("Qual foi a primeira mulher de Alexandre O'Neill?", "Ana Raposo", "Teresa Patrício Gouveia", "Cristina Ferreira", "Teresa Pedroso Gouveia", "Teresa Patrício Gouveia");
-quest[5] = new Array("Qual foi era o principal género literário de Alexandre O'Neill?", "Lírico", "Dramático", "Épico-narrativo", "Lírico");
-quest[6] = new Array("Quanta vezes foi Alexandre O'Neill foi preso pela PIDE?", "Nunca", "1", "2 ou mais", "2 ou mais");
-quest[7] = new Array("Alexandre O'Neill era descendente de…", "Africanos", "Portugueses", "Irlandeses" , "Irlandeses");
-quest[8] = new Array("Quando foi a data da sua morte?", "31 de Fevereiro de 1800", "21 de Agosto de 1986" , "24 Dezembro de 2003");
-quest[9] = new Array("Onde fica localizada a estátua em homenagem de Alexandre O'Neill?", "Lousã", "Lisboa" , "Aveiro", "Porto", "Lisboa");
-quest[10] = new Array("Quantos prémios recebeu?", "1", "2", "3", "4", "1");
-quest[11] = new Array("Em que prisão o Alexandre O'Neill ficou?", "Estabelecimento Prisional de Caxias, Lisboa" , "Estabelecimento Prisional de Coimbra", "Estabelecimento Prisional De Leiria", "Estabelecimento Prisional de Caxias, Lisboa");
-quest[12] = new Array("Quando recebeu o Prémio da Crítica da Associação Portuguesa de Críticos Literário?", "1988", "1976", "1981" , "1981");
-quest[13] = new Array("Qual foi jornal em que Alexandre O'Neill esteve empregado?", "Diário de Notícias", "Correio da Manhã", "Diário de Lisboa", "Diário de Lisboa");
-quest[14] = new Array("Quantas imagens tinha a obra \"Ampola Miraculosa\"?", "15 imagens" , "13 imagens" , "2 imagens", "17 imagens" , "15 imagens");
-quest[15] = new Array("Quantos irmãos tinha O´Neill?", "2", "0", "1" , "1");
-quest[16] = new Array("Qual o nome da irmã mais velha?", "Maria Amélia" , "Maria Antonieta", "Maria José", "Maria João", "Maria Amélia");
-quest[17] = new Array("Onde é que se situa a biblioteca de seu nome?", "Coimbra", "Distrito de Algarve", "Constância", "Constância");
-quest[18] = new Array("Qual destes poemas foi escrito por Alexandre?", "\"Os Lusíadas\"", "\"O Beijo\"", "\"A Mensagem\"", "\"Amiga\"", "\"O Beijo\"");
-quest[19] = new Array("Qual o nome completo do autor em questão?", "Alexandre António Vasconcelos O’Neil", "Alexandre Manuel Vahia de Castro O'Neill de Bulhões", "Sílvio Alexandre Gomes Vahia Ribeiro O’Neil", "Alexandre Manuel Vahia de Castro O'Neill de Bulhões");
-quest[20] = new Array("Qual destes poemas foram escritos por O´Neill?", "\"Amigo\"", "\"Romeu e Julieta\"", "\"A Fada Oriana\"", "\"Amigo\"");
-quest[21] = new Array("Que canção escreveu Alexandre O’Neill?", "\"Coração não tem idade\"", "\"A Gaivota\"", "\"Anda Comigo\"", "\"A Gaivota\"");
-quest[22] = new Array("Que tipo textual eram as obras de O’Neill?", "Poemas", "Narrações", "Documentários", "Poemas");
-quest[23] = new Array("A poesia de Alexandre O'Neill coincide com o programa surrealista a que nível/eis?", "Libertação total da poesia", "Libertação total da musica e libertação total da poesia", "Libertação total do homem e libertação total da arte", "Libertação total do homem e libertação total da arte");
-quest[24] = new Array("Alexandre era fundador de que grupo?", "Grupo Surrealista de Lisboa", "Grupo de Teatro Amador" , "Grupo dos Trabalhadores Explorados", "Grupo Sonae", "Grupo Surrealista de Lisboa");
-quest[25] = new Array("Alexandre O'Neill exerceu a atividade profissional…", "…de jornalista", "…de técnico publicitário", "…aviador", "…de técnico publicitário");
-quest[26] = new Array("É da sua autoria o lema publicitário…", "\"Há mar e mar, há ir e voltar\"", "\"Amor é fogo que arde sem se ver\"", "\"Somos todos filhos de Deus\"", "\"Há mar e mar, há ir e voltar\"");
-quest[27] = new Array("Quem canta o seu famoso poema \"A Gaivota\"?", "Maria Jesus", "Amália Rodrigues", "Celeste Rodrigues", "Carlos do Carmo", "Amália Rodrigues");
-quest[28] = new Array("Com que idade faleceu?", "30 anos", "61 anos", "54 anos", "61 anos");
-
+quest[0] = new Array("Qual é a cor do cavalo branco de Napoleão?", "Preto", "Arco-íris", "Verde", "Laranja", "Verde");
+quest[0] = new Array("Qual é a cor do cavalo branco de Napoleão?", "Preto", "Arco-íris", "Verde", "Laranja", "Verde");
 
 np = 0
-var errada = false; 
+var errada = false;
+var roomcode = "";
+
+document.getElementById("roombtn").addEventListener("click", function() {
+  textcode = document.getElementById("roomcode");
+  roomcode = textcode.text;
+  textcode.disabled = true;
+});
 
 window.onload = function () {
   //The initial setup
@@ -367,6 +346,15 @@ window.onload = function () {
   //initialize the board
   Board.initalize();
 
+  socket= new WebSocket('ws://127.0.0.1:8765');
+
+  socket.onopen= function() {
+    socket.send();
+  };
+
+  socket.onmessage= function(s) {
+    console.log("Recebeu.")
+  };
   /***
   Events
   ***/
@@ -385,8 +373,8 @@ window.onload = function () {
           $(this).addClass('selected');
         }
       } else {
-        let exist = "jump exist for other pieces, that piece is not allowed to move"
-        let continuous = "continuous jump exist, you have to jump the same piece"
+        let exist = "pode saltar com outras peças, essa peça não pode saltar"
+        let continuous = "salto contínuo permitido, utilize a mesma peça"
         let message = !Board.continuousjump ? exist : continuous
         console.log(message)
       }
@@ -396,6 +384,17 @@ window.onload = function () {
   //reset game when clear button is pressed
   $('#cleargame').on("click", function () {
     Board.clear();
+
+    socket= new WebSocket('ws://127.0.0.1:8765');
+
+    socket.onopen= function() {
+        socket.send("");
+    };
+    
+    socket.onmessage= function(s) {
+      console.log("Recebeu.")
+    };
+
   });
 
   //move piece when tile is clicked
@@ -435,4 +434,12 @@ window.onload = function () {
       }
     }
   });
+}
+
+window.onbeforeunload = function () {
+  socket= new WebSocket('ws://127.0.0.1:8765');
+
+  socket.onopen= function() {
+      socket.send("end," + roomcode);
+  };
 }

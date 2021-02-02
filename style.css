@@ -53,7 +53,7 @@ div.perg {
     height: auto; } }
 div.info, div.stats {
   width: 70%;
-  margin: 13vmin auto 0;
+  margin: 6vmin auto 0;
   box-sizing: border-box;
   padding: 20px 30px;
   background-color: #F1F1FF;
@@ -131,6 +131,39 @@ div.stats {
     transition: background-color 0.15s linear; }
     div.stats button#cleargame:hover {
       background-color: #0c5a6b; }
+
+#roombtn {
+  display: block;
+  border: 0;
+  color: #F1F1FF;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto 10px;
+  padding: 10px;
+  background-color: #16A8C7;
+  box-shadow: 1px 1px 3px #232621;
+  transition: background-color 0.15s linear; 
+} #roombtn:hover {
+  background-color: #0c5a6b; 
+}
+
+#roomcode {
+  width: 100%;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  display: block;
+  border: 0;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px auto 10px;
+  padding: 10px;
+  box-shadow: 1px 1px 3px #232621;
+  transition: background-color 0.15s linear; 
+}
 
 button.btns {
   display: inline-block;

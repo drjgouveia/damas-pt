@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+  <title>DAMAS DA POESIA</title>
+  <meta charset="UTF-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon"><meta charset="UTF-8">
+  <link rel="icon" href="favicon.png" type="image/x-icon">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="column">
+    <div class="info">
+      <h2>Código da sala</h2>
+      <hr>
+      <input id="roomcode" type="text" maxlength="4" placeholder="Código da sala pretendida ou para nova sala" onkeypress="return ((event.charCode >= 65 && event.charCode <= 90) || (event.charCode >= 97 && event.charCode <= 122) || (event.charCode == 32))">
+      <button id="roombtn" class="room">Entrar</button>
+    </div>
+    <div class="stats">
+      <h2>Estatísticas do jogo</h2>
+      <hr>
+      <div class="wrapper">
+        <div id="player1">
+          <h3>Jogador 1 (vermelho)</h3>
+        </div>
+        <div id="player2">
+          <h3>Jogador 2 (azul)</h3>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="turn"></div>
+      <span id="winner"></span>
+      <button id="cleargame">Reset Game</button>
+    </div>
+    <div class="info">
+      <h2>Perguntas</h2>
+      <h3 id="player"></h3>
+      <hr>
+      <p id="pergunta"></p>
+      <h3 id="errada" style="color:red"></h3>
+      <h3 id="correta" style="color:green"></h3>
+      <div class="perg">
+      </div>
+    </div>
+  </div>
+  <div class="column">
+    <div id="board">
+      <div class="tiles"></div>
+      <div class="pieces">
+        <div class="player1pieces">
+        </div>
+        <div class="player2pieces">
+        </div>
+      </div>
+  </div>
+</body>
+</html>
