@@ -1,18 +1,22 @@
 var quest = new Array();
-quest[0] = new Array("Em que ano o Alexandre O'Neill nasceu?", "1918", "1924", "459", "1924");
-quest[1] = new Array("Qual foi nome do primeiro livro publicado por Alexandre O'Neill?", "No Reino da Dinamarca", "Tempo de Fantasmas", "Feira Cabisbaixa", "No Reino da Dinamarca");
+quest[0] = new Array("Em que ano nasceu Alexandre O'Neill?", "1918", "1924", "459", "1924");
+quest[1] = new Array("Qual foi nome do primeiro livro publicado por Alexandre O'Neill?", "\"No Reino da Dinamarca\"", "\"Tempo de Fantasmas\"", "\"Feira Cabisbaixa\"", "\"No Reino da Dinamarca\"");
 quest[2] = new Array("Qual era o movimento literário de Alexandre O'Neill?", "Surrealismo", "Romantismo", "Realismo", "Surrealismo");
 quest[3] = new Array("Quem era o pai de Alexandre O'Neill?", "Marcelo Rebelo de Sousa", "Pedro Moura Coutinho O'Neill", "José António Pereira de Eça O'Neill", "Francisco Costa", "José António Pereira de Eça O'Neill");
 quest[4] = new Array("Qual foi a primeira mulher de Alexandre O'Neill?", "Ana Raposo", "Teresa Patrício Gouveia", "Cristina Ferreira", "Teresa Pedroso Gouveia", "Teresa Patrício Gouveia");
 quest[5] = new Array("Qual foi era o principal género literário de Alexandre O'Neill?", "Lírico", "Dramático", "Épico-narrativo", "Lírico");
 quest[6] = new Array("Quanta vezes foi Alexandre O'Neill foi preso pela PIDE?", "Nunca", "1", "2 ou mais", "2 ou mais");
 quest[7] = new Array("Alexandre O'Neill era descendente de…", "Africanos", "Portugueses", "Irlandeses" , "Irlandeses");
+<<<<<<< Updated upstream
 quest[8] = new Array("Quando foi a data da sua morte?", "31 de Fevereiro de 1800", "21 de Agosto de 1986" , "24 Dezembro de 2003", "21 de Agosto de 1986");
+=======
+quest[8] = new Array("Quando foi a data da sua morte?", "31 de fevereiro de 1800", "21 de agosto de 1986" , "24 dezembro de 2003", "21 de agosto de 1986");
+>>>>>>> Stashed changes
 quest[9] = new Array("Onde fica localizada a estátua em homenagem de Alexandre O'Neill?", "Lousã", "Lisboa" , "Aveiro", "Porto", "Lisboa");
 quest[10] = new Array("Quantos prémios recebeu?", "1", "2", "3", "4", "1");
 quest[11] = new Array("Em que prisão o Alexandre O'Neill ficou?", "Estabelecimento Prisional de Caxias, Lisboa" , "Estabelecimento Prisional de Coimbra", "Estabelecimento Prisional De Leiria", "Estabelecimento Prisional de Caxias, Lisboa");
 quest[12] = new Array("Quando recebeu o Prémio da Crítica da Associação Portuguesa de Críticos Literário?", "1988", "1976", "1981" , "1981");
-quest[13] = new Array("Qual foi jornal em que Alexandre O'Neill esteve empregado?", "Diário de Notícias", "Correio da Manhã", "Diário de Lisboa", "Diário de Lisboa");
+quest[13] = new Array("Qual foi jornal em que Alexandre O'Neill esteve empregado?", "\"Diário de Notícias\"", "\"Correio da Manhã\"", "\"Diário de Lisboa\"", "\"Diário de Lisboa\"");
 quest[14] = new Array("Quantas imagens tinha a obra \"Ampola Miraculosa\"?", "15 imagens" , "13 imagens" , "2 imagens", "17 imagens" , "15 imagens");
 quest[15] = new Array("Quantos irmãos tinha O´Neill?", "2", "0", "1" , "1");
 quest[16] = new Array("Qual o nome da irmã mais velha?", "Maria Amélia" , "Maria Antonieta", "Maria José", "Maria João", "Maria Amélia");
